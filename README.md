@@ -6,6 +6,8 @@
 streamlit run app.py
 ```
 
+python 3.9 prefered
+
 ## Reference
 
 [EXREX](https://github.com/asciimoo/exrex)
@@ -21,3 +23,5 @@ Exrex is a command line tool and python module that generates all - or random - 
 [Streamlit cheatsheet](https://cheat-sheet.streamlit.app/#display-data)
 
 [Regex 101](https://regex101.com/)
+
+[Streamlit url](https://regexapp-er6hereoutmwzv7xk8vbvk.streamlit.app/)

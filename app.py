@@ -3,6 +3,7 @@
 """
 import exrex
 import streamlit as st
+from streamlit_extras.buy_me_a_coffee import button
 from tdda import rexpy
 
 st.set_page_config(
@@ -63,6 +64,7 @@ def cs_body():
 
     st.markdown('The website will not store any input or output data. Wish it could help you')
     st.markdown('[Contact author](mailto:abraver@livemail.tw)')
+    button(username="abraverE", floating=False, width=250)
 
 
 def data2regex(corpus:list[str]) -> list:
