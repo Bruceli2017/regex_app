@@ -1,6 +1,3 @@
-"""
-
-"""
 import exrex
 import streamlit as st
 from streamlit_extras.buy_me_a_coffee import button
@@ -16,38 +13,37 @@ def main():
 
     cs_body()
 
-    return None
-
 
 def cs_body():
 
     with st.container():
-        st.header('Regex generator from data')
+        st.header('Data to Regex')
         col1, col2 = st.columns(2)
-
         # Data to regex
         col1.subheader('Input data')
         corpus = col1.text_area(label='input', placeholder='Paste your data', value='',
             label_visibility='collapsed', height=50)
-        col1.code("""
-            Example input:
-            EH1 3LH
-            BB2 5NR
-            
-            Output:
-            ^[A-Z]{2}[0-9] [0-9][A-Z]{2}$
-        """)
-        print(corpus)
+
+        # print(corpus)
         corpus = corpus.split('\n')
         col2.subheader('Output regex')
-
         regex_output = data2regex(corpus)
         for regex in regex_output:
             col2.code(regex)
-    
+
+    with st.container():
+        col1, col2 = st.columns(2)
+        col1.subheader('Example input:')
+        col1.code("""
+            EH1 3LH
+            BB2 5NR
+        """)
+        col2.subheader('Example output:')
+        col2.code("^[A-Z]{2}[0-9] [0-9][A-Z]{2}$")
+
     # Regex to data
     with st.container():
-        st.header('Data generator from regex')
+        st.header('Regex to Data')
         col1, col2 = st.columns(2)
         
         col1.subheader('Input regex')
