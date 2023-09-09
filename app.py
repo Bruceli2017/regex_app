@@ -23,14 +23,13 @@ def cs_body():
         col1.subheader('Input data')
         corpus = col1.text_area(label='input', placeholder='Paste your data', value='',
             label_visibility='collapsed', height=50)
-
         # print(corpus)
         corpus = corpus.split('\n')
         col2.subheader('Output regex')
         regex_output = data2regex(corpus)
         for regex in regex_output:
             col2.code(regex)
-
+    
     with st.container():
         col1, col2 = st.columns(2)
         col1.subheader('Example input:')
